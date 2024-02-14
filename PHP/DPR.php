@@ -4,12 +4,15 @@ class DPR {
     private $nama;
     private $bidang;
     private $partai;
+    private $foto;
 
-    public function __construct($id, $nama, $bidang, $partai) {
+    public function __construct($id, $nama, $bidang, $partai, $foto) {
         $this->id = $id;
         $this->nama = $nama;
         $this->bidang = $bidang;
         $this->partai = $partai;
+        $this->foto = $foto;
+
     }
 
     public function get_id() {
@@ -38,6 +41,13 @@ class DPR {
 
     public function set_partai($partai) {
         $this->partai = $partai;
+    }
+
+     public function set_foto($foto){
+        $this->foto = $foto;
+    }
+    public function get_foto(){
+        return $this->foto;
     }
 }
 

@@ -5,9 +5,10 @@ require('DPR.php');
 
 
 $llist = array(
-    new DPR(1, "John Doe", "Finance", "Party A"),
-    new DPR(2, "Jane Doe", "Healthcare", "Party B"),
-    new DPR(3, "Alice", "Education", "Party C")
+    new DPR(1, "Yuuji", "Finance", "Party A", "images\images1.jpeg"),
+    new DPR(2, "Megumi", "Healthcare", "Party B", "images\images2.jpeg"),
+    new DPR(3, "Yuuta", "Education", "Party C", "images\images3.jpeg"),
+    new DPR(4, "Nobara", "Biology", "Party D", "images\images4.jpeg")
 );
 
 echo "<table border='1'>";
@@ -17,6 +18,7 @@ echo "<tr>
     <th>Nama</th>
     <th>Bidang</th>
     <th>Partai</th>
+    <th>Foto</th>
     </tr>";
 
 
@@ -28,6 +30,7 @@ foreach ($llist as $elem) {
             <td>" . $elem->get_nama() . "</td>
             <td>" . $elem->get_bidang() . "</td>
             <td>" . $elem->get_partai() . "</td>
+            echo "<img src='" . $arraydpr[$i]->getFoto(). "'style='width: 200px'>";
           </tr>";
 }
 
@@ -43,6 +46,7 @@ foreach ($llist as $elem) {
         $elem->set_nama($newNama);
         $elem->set_bidang($newBidang);
         $elem->set_partai($newPartai);
+        $elem->set_foto($newFoto);
         break; 
     }
 }
@@ -56,6 +60,7 @@ echo "<tr>
     <th>Nama</th>
     <th>Bidang</th>
     <th>Partai</th>
+    <th>Foto</th>
     </tr>";
 
 $i = 1;
@@ -66,6 +71,7 @@ foreach ($llist as $elem) {
             <td>" . $elem->get_nama() . "</td>
             <td>" . $elem->get_bidang() . "</td>
             <td>" . $elem->get_partai() . "</td>
+            <td>" . $elem->get_foto() . "</td>
           </tr>";
 }
 
@@ -89,6 +95,7 @@ echo "<tr>
     <th>Nama</th>
     <th>Bidang</th>
     <th>Partai</th>
+    <th>Foto</th>
     </tr>";
 
 $i = 1;
@@ -99,6 +106,7 @@ foreach ($llist as $elem) {
             <td>" . $elem->get_nama() . "</td>
             <td>" . $elem->get_bidang() . "</td>
             <td>" . $elem->get_partai() . "</td>
+            <td>" . $elem->get_foto() . "</td>
           </tr>";
 }
 
